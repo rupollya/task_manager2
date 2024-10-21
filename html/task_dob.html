@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="/images/heart.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/authorization.css" rel="stylesheet">
+    <link href="/css/task_plus.css" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <header>
+        <link href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&display=swap"
+            rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </header>
+</head>
+
+<body style="background-color:#D0D0D0;">
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color: #7F7679">
+            <div class="container d-flex justify-content-between col-10">
+                <p class="mb-0" style="color:white;"><b>TaskManager</b></p>
+                <div class="d-flex align-items-center">
+                    <a href="https://github.com/rupollya/task_manager2" style="margin-right:40px;" target="_blank"
+                        title="Перейти на GitHub">
+                        <img src="/images/github.png" width="25" height="25" alt="GitHub">
+                    </a>
+
+                    <div class="image-container d-flex">
+                        <img src="/images/heart.png" width="20" height="20" class="dropdown-trigger">
+                        <div class="dropdown-content">
+                            <a href="https://t.me/rupollya">Telegram</a>
+                        </div>
+                    </div>
+                    <div class="image-container d-flex">
+                        <img src="/images/nastroika.png" width="20" height="20" style="margin-left:40px"
+                            class="dropdown-trigger">
+                        <div class="dropdown-content">
+                            <a href="/">Выйти</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="section1 col-2">
+
+                <div>
+                    <p class="mt-4 align-items-center d-flex justify-content-center"
+                        style="font-size: 20px;color:#696969;">
+                        <b>Дополнительные</b>
+
+                    </p>
+                    <p class="mt-4 align-items-center d-flex justify-content-center"
+                        style="font-size: 20px;color:#696969;">
+
+                        <b> возможности</b>
+                    </p>
+                    <div class="button-container">
+                        <!--ЦВЕТ ШРИФТА-->
+                        <div class="dropdown mt-3 w-100">
+                            <button
+                                class="btn btn-secondary dropdown-toggle w-100 d-flex align-items-center justify-content-center"
+                                type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Цвет текста
+                            </button>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#" onclick="changeColor('black')">Черный</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeColor('white')">Белый
+                                <li><a class="dropdown-item" href="#" onclick="changeColor('#b83b5e')">Красный</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeColor('#3f72af')">Синий</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeColor('#ffb6b9')">Розовый</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeColor('#99ddcc')">Зеленый</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeColor('#d59bf6')">Фиолетовый</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#" onclick="changeColor('#f08a5d')">Оранжевый</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Размер шрифта -->
+                    <div class="button-container">
+                        <div class="dropdown mt-3 w-100">
+                            <button
+                                class="btn btn-secondary dropdown-toggle w-100 d-flex align-items-center justify-content-center"
+                                type="button" id="dropdownFontSize" data-bs-toggle="dropdown" aria-expanded="false">
+                                Размер текста
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownFontSize">
+                                <li><a class="dropdown-item" href="#" onclick="setFontSize(2)">Маленький</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="setFontSize(4)">Средний</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="setFontSize(6)">Большой</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--цвет фона -->
+                    <div class="button-container">
+                        <div class="dropdown mt-3 w-100">
+                            <button
+                                class="btn btn-secondary dropdown-toggle w-100 d-flex align-items-center justify-content-center"
+                                type="button" id="dropdownBackgroundColor" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Цвет фона
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownBackgroundColor">
+                                <li><a class="dropdown-item" href="#"
+                                        onclick="setBackgroundColor('#ffaaa6')">Персиковый</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#"
+                                        onclick="setBackgroundColor('#ace7ef')">Голубой</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#"
+                                        onclick="setBackgroundColor('#a7ff83')">Зеленый</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#"
+                                        onclick="setBackgroundColor('#e84a5f')">Красный</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#" onclick="setBackgroundColor('#35477d')">Синий</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#"
+                                        onclick="setBackgroundColor('#fccde2')">Розовый</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#" onclick="setBackgroundColor('#144d53')">Тёмный</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- стиль текста -->
+                    <div class="button-container">
+                        <div class="dropdown mt-3 w-100">
+                            <button
+                                class="btn btn-secondary dropdown-toggle w-100 d-flex align-items-center justify-content-center"
+                                type="button" id="dropdownTextStyle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Стиль текста
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownTextStyle">
+                                <li><a class="dropdown-item" href="#" onclick="applyTextStyle('bold')">Жирный</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="applyTextStyle('italic')">Курсив</a></li>
+                                <li><a class="dropdown-item" href="#"
+                                        onclick="applyTextStyle('underline')">Подчеркнутый</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#" onclick="removeAllStyles()">Снять все стили</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="/storage" class="task_dob d-flex align-items-center justify-content-center flex-wrap"
+                    style="margin-top: 120px; text-decoration: none;">
+                    <p class="nologo button_section2" style="padding: 15px 0; margin: 0;">
+                        Вернуться к задачам
+                    </p>
+                </a>
+            </div>
+
+            <div class="section_task_dob col-7">
+
+                <div class="heading mt-3">
+                    <p class="new_task"><b>Задача</b></p>
+                    <input maxlength="200" type="text" name="heading" id="heading" class="form-control"
+                        placeholder="Писать здесь...">
+                </div>
+                <div class="textarea mt-3">
+                    <p class="new_task"><b>Дополнительная информация</b></p>
+
+                    <div maxlength="1000" id="editableDiv" contenteditable="true" class="form-control"
+                        style="border: 1px solid #ccc; padding: 10px;"></div>
+                </div>
+            </div>
+            <div class="section3 col-2" style="height: 100vh;">
+                <input type="hidden" id="task_id">
+                <div class="date mt-4">
+                    <p style="font-size:15px">Дата создания: <span id="creationDate"></span></p>
+                    <div class="d-flex">
+                        <p style="font-size:15px">Завершить до: <input type="date" id="completionDate"></p>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <p class=" d-flex align-items-center justify-content-center"
+                    style="color:#78858B;font-size:20px;margin-top:20px;"><b>Степень важности</b></p>
+                <div class="d-flex mt-4 align-items-center justify-content-center">
+                    <form>
+                        <label style="font-size: 20px;color: white;margin-right: 10px;"
+                            for="importantCheckbox">Срочная задача</label>
+                        <input id="importantCheckbox" type="checkbox">
+                    </form>
+                </div>
+                <p id="taskStatusContainerText"class="d-flex align-items-center justify-content-center"
+                    style="color:#78858B;font-size:20px;margin-top:20px;">
+                    <b>Статус задачи</b>
+                </p>
+                <div class="mt-4 d-flex align-items-center justify-content-center" style="display: none;"
+                    id="taskStatusContainer">
+                    <form>
+                        <div class="d-flex ">
+                            <span id="taskStatus" style="font-size: 20px; color: white; margin-right: 10px;">Задача в
+                                процессе</span>
+                            <input id="completedCheckbox" type="checkbox">
+                        </div>
+                    </form>
+                </div>
+                <p class=" d-flex align-items-center justify-content-center"
+                    style="color:#78858B;font-size:18px;margin-top:28px;"><b> Награда за
+                        выполнение</b></p>
+                <textarea maxlength="100" name="prize" id="prize" class="form-control"
+                    placeholder="Потрогаю траву..."></textarea>
+                <div class="d-flex justify-content-center mt-5">
+                    <button class="but2" onclick="saveTask()">Сохранить задачу</button>
+                </div>
+                <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="errorModalLabel">Ошибка</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p id="modalErrorMessage">Пожалуйста, заполните все обязательные поля.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/js/editing_functionality.js"></script>
+    <script src="/js/task_status.js"></script>
+
+    <script src="/js/task_dob.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
